@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets
+        <table border = "1">
+            <tr><th>Nazwa</th><th>Numer</th><th>Balans</th></tr>
+            <ui:repeat value="#{banker.clients}" var="customer">
+                <tr>
+                    <td>#{customer.name}</td>
+                    <td>
+                        <h:outputLink value="faces/history.xhtml">
+                            <f:param name="type" value="#{customer.type}"/>
+                            <h:outputText value="#{customer.type}" />
+                        </h:outputLink>
+                    </td>
+                    <td>#{customer.lastAcc.balance}</td>
+                </tr>
+            </ui:repeat>
+        </table>
+        <h:outputLink value="faces/balances.xhtml">info</h:outputLink>
+    </h:body>
+</html>
+

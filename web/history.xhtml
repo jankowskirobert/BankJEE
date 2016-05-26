@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./sideing.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html">
+
+    <ui:define name="top">
+
+        top #{banker.activeType.name}
+    </ui:define>
+
+    <ui:define name="content">
+        content
+        <table>
+            <tr>
+                <th>Balance</th><th>No</th>
+            </tr>
+            <ui:repeat value="#{banker.activeType.acc}" var="acco">
+                <tr>
+                    <td>
+                        #{acco.balance}
+                    
+                    </td>
+                    <td>
+                        #{acco.number}
+                    </td>
+                </tr>
+            </ui:repeat>
+        </table>
+    </ui:define>
+
+</ui:composition>
