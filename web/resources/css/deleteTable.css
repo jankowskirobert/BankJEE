@@ -1,0 +1,21 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-06-15, 19:31:55
+    Author     : init0
+*/
+
+table.people {
+    width: 100%;
+    border-collapse: collapse; /* so we can control cellspacing in a practical way */
+}
+
+table.people th,
+table.people td {
+    padding: 5px;
+    text-align: left;
+    font-family: Arial, Verdana, sans-serif;
+}

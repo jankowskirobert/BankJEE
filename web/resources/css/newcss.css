@@ -1,0 +1,120 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2016-05-31, 19:34:40
+    Author     : init0
+*/
+body{
+    margin-left: 5%;
+    margin-right: 5%;
+    background-color: white;
+    display: inline-block;
+    width: 90%;
+    display:box;
+}
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+
+.nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:300px;
+    width:100px;
+    float:left;
+    padding:5px; 
+
+}
+.nav ul{
+    margin-left: 0px;
+    text-align: left;
+    padding-left: 0;
+}
+.nav ul li {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    text-align: left;
+    margin-left: 1px;
+    list-style-position: outside;
+    list-style-type: none;
+    padding-left: 1px;
+    width: 100%;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+.nav li a {
+    color: white;
+}
+.nav li:hover a {
+    background-color: lightblue;
+}
+#content {
+    width:800px;
+    float: left;
+   
+    margin-left: 2%;
+    margin-right: 2%;
+
+
+}
+
+.my-table {
+    display: table;
+    width:auto;
+}
+.my-table-row {
+    display: table-row;
+    width: auto;
+    clear: both;
+}
+.my-table-col {
+    float: left;
+    display: table-column;
+    width: 100px;
+}
+
+table.people {
+    width: 80%;
+
+    border:solid 1px #e0e0e0;
+    border-collapse: collapse;
+}
+
+table.people th,
+table.people td {
+    padding: 5px;
+    text-align: left;
+    font-family: Arial, Verdana, sans-serif;
+    border: 1px solid #000; /* let's apply borders */
+}
+.navigaton {
+    float: left;
+}
+.navigaton ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+
+.navigaton li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+    text-decoration: none;
+}
+
+/* Change the link color on hover */
+.navigaton li a:hover {
+    background-color: #555;
+    color: white;
+}

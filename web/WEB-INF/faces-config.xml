@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+<!--<managed-bean>
+    <managed-bean-name>banker</managed-bean-name>
+    <managed-bean-class>banking.customer.Banker</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <managed-property>
+        <property-name>symActiveType</property-name>
+        <value>#{param.type}</value>
+    </managed-property>
+</managed-bean>
+
+<managed-bean>
+    <managed-bean-name>balanced</managed-bean-name>
+    <managed-bean-class>banking.customer.AccountsInfo</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <managed-property>
+        <property-name>bankier</property-name>
+        <value>#{banker}</value> WSTRZYKIWANIE beana
+    </managed-property>
+</managed-bean>
+
+<managed-bean>
+    <managed-bean-name>customerInjected</managed-bean-name>
+    <managed-bean-class>banking.customer.AddAccount</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    <managed-property>
+        <property-name>name</property-name>
+        <value>#{banker}</value> WSTRZYKIWANIE beana
+    </managed-property>
+</managed-bean>
+
+<managed-bean>
+    <managed-bean-name>customered</managed-bean-name>
+    <managed-bean-class>banking.customer.AddAccount</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    
+</managed-bean>
+
+<managed-bean>
+    <managed-bean-name>customertmp</managed-bean-name>
+    <managed-bean-class>banking.customer.Customer</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+    
+    </managed-bean>-->
+
+</faces-config>

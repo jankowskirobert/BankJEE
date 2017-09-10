@@ -1,0 +1,27 @@
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <testSourceDirectory>testpackages</testSourceDirectory>
+    <testOutputDirectory>target/test-classes</testOutputDirectory>
+    <plugins>
+        <plugin>
+            <version>2.3.2</version>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <configuration>
+                <source>1.6</source>
+                <target>1.6</target>
+            </configuration>
+        </plugin>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>2.1.1</version>
+            <configuration>
+                <failOnMissingWebXml>false</failOnMissingWebXml>
+                <webResources>
+                    <resource>
+                        <!-- this is relative to the pom.xml directory -->
+                        <directory>web-root</directory>
+                    </resource>
+                </webResources>
+            </configuration>
+        </plugin>

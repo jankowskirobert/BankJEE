@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="./sideing.xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="top">
+        <h1>Kradne Kase</h1>
+    </ui:define>
+
+    <ui:define name="content">
+        <div id="content">
+            <h:form id="formularz">
+                <h1>Withdraw</h1>
+                <h:dataTable styleClass="people" value="#{withdrawer.clients}" var="entity">
+
+                    <h:column>
+                        <f:facet name="header">ID</f:facet>
+                            #{entity.id}
+                    </h:column>
+                    <h:column>
+                        <f:facet name="header">BALANCE</f:facet>
+                            #{entity.balance}
+                        <f:facet name="footer" >
+                            <h:outputLabel >Balance:</h:outputLabel>
+                            <h:inputText id="balance" value="#{withdrawer.balance}" required="true" requiredMessage="Value is required" validatorMessage="Value must be higher then zero">
+                            <f:validateDoubleRange minimum="0" maximum="99999" for="balance"/>
+                            </h:inputText>
+                            <h:message id="m1" for="balance" style="color:red"/>
+                            
+                        </f:facet>
+                    </h:column>
+                    <h:column >
+                        <f:facet name="header">STATUS</f:facet>
+                        <h:selectBooleanCheckbox value="#{withdrawer.clista[entity.id]}" />
+                        <f:facet name="footer" >
+                            <h:commandButton action="#{withdrawer.withdraw()}" value="ACCEPT!"/>
+                        </f:facet>
+
+                    </h:column>
+
+                </h:dataTable>
+
+
+
+
+
+            </h:form>
+        </div>
+    </ui:define>
+
+</ui:composition>
